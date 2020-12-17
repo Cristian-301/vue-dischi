@@ -11,12 +11,12 @@ var app = new Vue(
     el: "#root",
     data: {
       albums: [],
-      genre: []
+      genre: [],
+      albumGen: ""
+
     },
     methods: {
-      changeGenre: function() {
-        console.log("ciao");
-      }
+      
     },
     mounted: function() {
       let self = this;

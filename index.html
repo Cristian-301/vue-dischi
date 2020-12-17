@@ -14,15 +14,13 @@
       <div id="root">
 
         <div>
-          <select class="" name="" >
-            <option @click="changeGenre" value="">Scegli genere</option>
-            <option :value="gen"
-            v-for="gen in genre"
-            >{{gen}}</option>
+          <select v-model="albumGen" class="" name="" >
+            <option value="genre">Scegli genere</option>
+            <option :value="gen" v-for="gen in genre" >{{gen}}</option>
           </select>
         </div>
       <div id="container">
-        <div v-for="album in albums" class="albumCard">
+        <div v-if="albumGen == album.genre" v-for="album in albums" class="albumCard">
           <img :src="album.poster" alt="Album cover">
           <h2 class="title">{{ album.title }}</h2>
           <span>{{ album.author }}</span>
