@@ -12,13 +12,23 @@
         <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-vector-download-11.png" alt="">
       </header>
       <div id="root">
+
+        <div>
+          <select class="" name="" >
+            <option @click="changeGenre" value="">Scegli genere</option>
+            <option :value="gen"
+            v-for="gen in genre"
+            >{{gen}}</option>
+          </select>
+        </div>
+      <div id="container">
         <div v-for="album in albums" class="albumCard">
           <img :src="album.poster" alt="Album cover">
           <h2 class="title">{{ album.title }}</h2>
           <span>{{ album.author }}</span>
           <span>{{ album.year }}</span>
         </div>
-
+      </div>
       </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>

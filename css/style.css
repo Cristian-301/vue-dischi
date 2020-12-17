@@ -18,13 +18,21 @@ header > img {
 }
 
 #root {
+  background-color: #121212;
+}
+
+#root select {
+  width: 150px;
+
+}
+
+#container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* height: calc(100vh - 70px) ; */
-  background-color: #121212;
 }
+
 
 .albumCard {
   margin: 10px;
