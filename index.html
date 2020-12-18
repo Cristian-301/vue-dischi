@@ -12,15 +12,16 @@
         <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-vector-download-11.png" alt="">
       </header>
       <div id="root">
-
         <div>
           <select v-model="albumGen" class="" name="" >
-            <option value="genre">Scegli genere</option>
+            <option :value="genre">Tutti</option>
             <option :value="gen" v-for="gen in genre" >{{gen}}</option>
           </select>
         </div>
+
       <div id="container">
-        <div v-if="albumGen == album.genre" v-for="album in albums" class="albumCard">
+        <div v-if="album.genre == albumGen || albumGen == '' || albumGen == genre"
+        v-for="album in albums" class="albumCard">
           <img :src="album.poster" alt="Album cover">
           <h2 class="title">{{ album.title }}</h2>
           <span>{{ album.author }}</span>

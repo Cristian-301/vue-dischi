@@ -16,7 +16,7 @@ var app = new Vue(
 
     },
     methods: {
-      
+
     },
     mounted: function() {
       let self = this;
